@@ -1,0 +1,62 @@
+.black-screen {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+
+    nav {
+        background-color: $clr7;
+        border-bottom: 1px solid $clr3;
+        width: 100%;
+
+        .menu{
+            display: none;
+        }
+
+        button {
+            color: $clr6;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            margin: 10px 0;
+
+            &.curr {
+                color: $clr2;
+            }
+        }
+
+
+    }
+
+    @media (max-width:760px) {
+        background-color: rgba(0, 0, 0, 0.267);
+
+        &.open {
+            height: 100%;
+
+            .btns-container {
+                align-items: center;
+    
+                .menu{
+                    display: none;
+                }
+    
+                button {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .btns-container {
+            flex-direction: column;
+            align-items: flex-end;
+
+            .menu{
+                display: inline-block;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+}

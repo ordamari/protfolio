@@ -1,0 +1,96 @@
+.about {
+
+    .benefits-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media (max-width:1000px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .benefit {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $clr5;
+
+        h3 {
+            margin: 10px;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .icon-container {
+            background-color: $clr3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            width: 100px;
+            height: 100px;
+
+
+            svg {
+                font-size: 50px;
+                color: $clr6;
+            }
+        }
+    }
+
+    .on-me {
+
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        margin-bottom: 100px;
+
+
+        .download {
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: $clr1;
+            background-color: transparent;
+            border: 2px solid $clr2;
+            padding: 10px 20px;
+            transition: .5s;
+
+            svg {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: $clr2;
+                color: $clr6;
+            }
+        }
+    }
+
+    &.effect{
+        animation: come-from-right 1s ;
+    }
+
+}
+
+@keyframes come-from-right {
+    0% {
+        transform: translateX(-1000px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}

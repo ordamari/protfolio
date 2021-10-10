@@ -1,0 +1,63 @@
+.title{
+    height: 100%;
+    background-color: $clr1;
+    background-blend-mode: soft-light;
+    background-image: url('../../imgs/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .main-container{
+        height: 100%;
+
+        .text-container{
+            color: $clr6;
+            height: 100%;
+            font-size: 40px;
+            p{
+                margin: 0;
+                
+                span{
+                    color: $clr2;
+                }
+            }
+            
+            button{
+                margin-top: 20px;
+                font-size: 30px;
+                color: $clr6;
+                background-color: transparent;
+                border: 2px solid $clr6;
+                padding: 10px 20px;
+                transition: .5s;
+
+                svg{
+                    margin-left: 15px;
+                    font-size: 30px;
+                    animation: arrow-effect-unhover .5s ;
+                }
+
+                &:hover{
+                    svg{
+                        animation: arrow-effect .5s ;
+                        transform: rotate(90deg);
+                    }
+
+                    background-color: $clr3;
+                    border-color: $clr3;
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes arrow-effect {
+    0%   { transform: rotate(0) }
+    100% { transform: rotate(90deg) }
+  }
+
+@keyframes arrow-effect-unhover {
+    0%   { transform: rotate(90deg) }
+    100% { transform: rotate(0) }
+  }

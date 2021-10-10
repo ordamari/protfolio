@@ -1,0 +1,37 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+@import "setup/typography.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+
+// Components
+@import "components/navbar";
+@import "components/footer";
+@import "components/title";
+@import "components/about";
+@import "components/projects";
+@import "components/contact";
+
+
+// views
+@import "views/home";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
